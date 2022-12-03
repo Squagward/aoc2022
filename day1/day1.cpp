@@ -3,14 +3,13 @@
 #include <string>
 #include <vector>
 
-void part1() {
-    std::ifstream my_file("day1/day1.txt");
-    std::string file_contents;
+namespace day1 {
+    void part1() {
+        std::ifstream my_file("day1/day1.txt");
 
-    int max = 0;
-    int current_sum = 0;
+        int max = 0;
+        int current_sum = 0;
 
-    if (my_file.is_open()) {
         std::string line;
         if (my_file.is_open()) {
             while (my_file) {
@@ -23,19 +22,16 @@ void part1() {
                 }
             }
         }
+        my_file.close();
+        std::cout << "Part 1 Answer: " << max << std::endl;
     }
-    my_file.close();
-    std::cout << "Part 1 Answer: " << max << std::endl;
-}
 
-void part2() {
-    std::ifstream my_file("day1/day1.txt");
-    std::string file_contents;
+    void part2() {
+        std::ifstream my_file("day1/day1.txt");
 
-    std::vector<int> sums;
-    int current_sum = 0;
+        std::vector<int> sums;
+        int current_sum = 0;
 
-    if (my_file.is_open()) {
         std::string line;
         if (my_file.is_open()) {
             while (my_file) {
@@ -65,14 +61,15 @@ void part2() {
                 }
             }
         }
+
+        int sum = sums[0] + sums[1] + sums[2];
+        my_file.close();
+        std::cout << "Part 2 Answer: " << sum << std::endl;
     }
 
-    int sum = sums[0] + sums[1] + sums[2];
-    my_file.close();
-    std::cout << "Part 2 Answer: " << sum << std::endl;
-}
+    void max_elves() {
+        part1();
+        part2();
+    }
 
-void max_elves() {
-    part1();
-    part2();
 }

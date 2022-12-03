@@ -4,5 +4,7 @@
 
 #ifndef AOC2022_DAY1_H
 #define AOC2022_DAY1_H
-void max_elves();
+namespace day1 {
+    void max_elves();
+}
 #endif //AOC2022_DAY1_H
