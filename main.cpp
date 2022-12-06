@@ -4,6 +4,7 @@
 #include "day3/day3.h"
 #include "day4/day4.h"
 #include "day5/day5.h"
+#include "day6/day6.h"
 
 int main() {
     day1::max_elves();
@@ -15,5 +16,7 @@ int main() {
     day4::pairs();
     std::cout << std::endl;
     day5::crates();
+    std::cout << std::endl;
+    day6::signals();
     return 0;
 }
